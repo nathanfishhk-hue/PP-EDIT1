@@ -222,7 +222,7 @@ export default function App() {
 
         {/* Floating coastal text */}
         <motion.div style={{ opacity: heroOpacity }} className="relative z-10 h-full mx-auto max-w-[1250px] px-5 sm:px-7 flex flex-col justify-center pt-[260px]">
-          <div className="mt-6 sm:mt-8 max-w-[980px]">
+          <div className="mt-6 sm:mt-8 mt-20 max-w-[980px]">
             <h1 className="display text-[44px] sm:text-[64px] lg:text-[84px] leading-[0.89] font-[800] tracking-[-0.022em] text-white"
                 style={{ textShadow:"0 18px 55px rgba(0,0,0,.52)"}}>
               Punctual Plumbers.<br/>
@@ -231,8 +231,7 @@ export default function App() {
                 WebkitBackgroundClip:"text",
                 backgroundClip:"text",
                 color:"transparent"
-              }}>Being Punctual is our business.</span><br/>
-              Your Paradise Protected.
+              }}>Being Punctual is our business.</span>
             </h1>
           </div>
 
@@ -261,13 +260,13 @@ export default function App() {
             >
               <div className="absolute -right-16 -top-16 w-[180px] h-[180px] rounded-full blur-[70px] opacity-25" style={{ background: colors.aqua }} />
               <div className="p-[22px]">
-                <div className="text-[11px] tracking-[0.18em] text-[#94f0ff] font-[700]">LIVE ROUTE BOARD</div>
+                <div className="text-[11px] tracking-[0.18em] text-[#94f0ff] font-[700]">JOBS COMPLETED</div>
                 <div className="mt-3 grid grid-cols-2 gap-3 text-center">
                   {[
-                    {k:"38m", s:"Avg arrival"},
-                    {k:"9", s:"Vans active"},
-                    {k:"24/7", s:"Dispatch"},
-                    {k:"0", s:"Call-out if hired"},
+                    {k:"1,200+", s:"Residential Jobs"},
+                    {k:"85+", s:"Commercial Jobs"},
+                    {k:"234+", s:"New Builds"},
+                    {k:"1,500+", s:"Emergency Call Outs"},
                   ].map(c=>(
                     <div key={c.s} className="rounded-[16px] py-3" style={{ background:"rgba(255,255,255,0.032)", border:"1px solid rgba(255,255,255,0.06)"}}>
                       <div className="display text-[22px] font-[800] text-white">{c.k}</div>
@@ -398,7 +397,7 @@ export default function App() {
                 const scale = isCenter ? 1 : Math.max(0.45, 0.85 - (abs - 1) * 0.18);
                 const rotateY = isCenter ? 0 : sign * (abs === 1 ? -22 : -40);
                 const z = isCenter ? 0 : -(abs * 60);
-                const opacity = isCenter ? 1 : Math.max(0, 0.7 - (abs - 1) * 0.2);
+                const opacity = isCenter ? 1 : Math.max(0, 0.9 - (abs - 1) * 0.1);
                 return (
                   <motion.div
                     key={i}
@@ -414,7 +413,7 @@ export default function App() {
                       style={{
                         background: isCenter
                           ? "linear-gradient(170deg, rgba(23,48,76,0.98), rgba(8,24,44,0.98))"
-                          : "linear-gradient(170deg, rgba(10,22,40,0.94), rgba(8,18,34,0.94))",
+                          : "linear-gradient(170deg, rgba(10,22,40,0.98), rgba(8,18,34,0.98))",
                         borderColor: isCenter
                           ? "rgba(0,210,255,0.25)"
                           : "rgba(255,255,255,0.13)",
@@ -731,9 +730,7 @@ export default function App() {
           <div>
             <div className="text-white font-[700] mb-2">Route Offices</div>
             <ul className="space-y-[7px] text-white/60">
-              <li>Knysna HQ – 083 237 9132</li>
-              <li>George – 083 237 9132</li>
-              <li>Plettenberg Bay – 083 237 9132</li>
+              <li>Garden Route – 083 237 9132</li>
               <li>Emergency 24/7 – same number</li>
             </ul>
           </div>
